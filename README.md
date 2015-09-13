@@ -46,7 +46,7 @@ My implementation observed the following pattern. The time are all in millisecon
 
 #### Graph
 
-![](images/Graph.png)
+![](images/PerformanceGraph.png)
 
 #### Analysis
 
