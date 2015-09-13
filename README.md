@@ -55,39 +55,48 @@ The bottleneck for the Work-Efficient implementation should be a lot of memory a
 
 ### Output
 
-The console output of the program is as follows. Note that a test for Radix Sort was also written. I used the sort function under the header file <algorithm> and compared my implementations result with it. This was done to test the correctness of the Parallel Radix Sort implementation.
-	
+The console output of the program is as follows. Note that a test for Radix Sort was also written. I used the sort function under the header file "algorithm" and compared my implementations result with it. This was done to test the correctness of the Parallel Radix Sort implementation.
+
 ****************
 ** SCAN TESTS **
 ****************
+
     [  30  41  15  22  11  41  10  37  48  41  44  30  26 ...  20   0 ]
 ==== cpu scan, power-of-two ====
+
     [   0  30  71  86 108 119 160 170 207 255 296 340 370 ... 26119 26139 ]
 ==== cpu scan, non-power-of-two ====
+
     [   0  30  71  86 108 119 160 170 207 255 296 340 370 ... 26031 26064 ]
     passed 
 
 ==== naive scan, power-of-two ====
+
     [   0  30  71  86 108 119 160 170 207 255 296 340 370 ... 26119 26139 ]
     passed 
 
 ==== naive scan, non-power-of-two ====
+
     [   0  30  71  86 108 119 160 170 207 255 296 340 370 ...   0   0 ]
     passed 
 
 ==== work-efficient scan, power-of-two ====
+
     [   0  30  71  86 108 119 160 170 207 255 296 340 370 ... 26119 26139 ]
     passed 
 
 ==== work-efficient scan, non-power-of-two ====
+
     [   0  30  71  86 108 119 160 170 207 255 296 340 370 ... 26031 26064 ]
     passed 
 
 ==== thrust scan, power-of-two ====
+
     [   0  30  71  86 108 119 160 170 207 255 296 340 370 ... 26119 26139 ]
     passed 
 
 ==== thrust scan, non-power-of-two ====
+
     [   0  30  71  86 108 119 160 170 207 255 296 340 370 ... 26031 26064 ]
     passed 
 
@@ -95,28 +104,42 @@ The console output of the program is as follows. Note that a test for Radix Sort
 *****************************
 ** STREAM COMPACTION TESTS **
 *****************************
+
     [   2   3   3   0   1   1   2   1   2   1   2   0   2 ...   0   0 ]
+
 ==== cpu compact without scan, power-of-two ====
+
     [   2   3   3   1   1   2   1   2   1   2   2   2   3 ...   2   1 ]
     passed 
+
 ==== cpu compact without scan, non-power-of-two ====
+
     [   2   3   3   1   1   2   1   2   1   2   2   2   3 ...   1   2 ]
     passed 
+
 ==== cpu compact with scan ====
+
     [   2   3   3   1   1   2   1   2   1   2   2   2   3 ...   2   1 ]
     passed 
+
 ==== work-efficient compact, power-of-two ====
+
     [   2   3   3   1   1   2   1   2   1   2   2   2   3 ...   2   1 ]
     passed 
+
 ==== work-efficient compact, non-power-of-two ====
+
     [   2   3   3   1   1   2   1   2   1   2   2   2   3 ...   1   2 ]
     passed 
 
 ****************
 ** RADIX SORT **
 ****************
-==== Radix Sort,<sizeAr> elements ====
+
+==== Radix Sort, sizeAr elements ====
+
     [  30  91  15  72  61  41  10  37  98  41  94  80  26  96  10  88 ]
+	
     [  10  10  15  26  30  37  41  41  61  72  80  88  91  94  96  98 ]
     passed 
 
